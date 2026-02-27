@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Models from "./pages/Models";
 import ModelDetail from "./pages/ModelDetail";
 import NotFound from "./pages/NotFound";
+import CursorFollower from "./components/CursorFollower";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      {/* Global custom cursor — hides default cursor on pointer devices */}
+      <CursorFollower />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />

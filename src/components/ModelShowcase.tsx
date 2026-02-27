@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { models } from "@/data/models";
 import { useEffect, useRef, useState, useCallback } from "react";
+import LazyImage from "@/components/LazyImage";
 
 type Vec2 = { x: number; y: number };
 
@@ -76,11 +77,10 @@ const ModelCard = ({
         onMouseLeave={handleMouseLeave}
       >
         {/* ── Image layer — inner parallax ── */}
-        <img
+        <LazyImage
           src={model.image}
           alt={`${model.name} — Alliance talent`}
           className="absolute inset-0 w-full h-full object-cover"
-          loading="lazy"
           style={{
             transform: `scale(1.14) translateX(${tilt.y * -0.45}px) translateY(${tilt.x * -0.45}px)`,
             transition: hovered ? "transform 0.1s ease-out" : "transform 0.9s cubic-bezier(0.16,1,0.3,1)",

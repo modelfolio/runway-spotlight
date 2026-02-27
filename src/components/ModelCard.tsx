@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import type { ModelProfile } from "@/data/models";
 import { useState, useCallback, useRef } from "react";
+import LazyImage from "@/components/LazyImage";
 
 interface ModelCardProps {
   model: ModelProfile;
@@ -65,11 +66,10 @@ const ModelCard = ({ model, index, noEntrance }: ModelCardProps) => {
         }}
       >
         <div className="relative overflow-hidden aspect-[3/4] bg-secondary">
-          <img
+          <LazyImage
             src={model.image}
             alt={`${model.name} — ${model.category} model`}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-107"
-            loading="lazy"
+            className="w-full h-full object-cover"
             style={{
               transform: isHovered ? "scale(1.07)" : "scale(1)",
               transition: "transform 0.7s ease-out",

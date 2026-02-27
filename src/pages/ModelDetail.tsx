@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { models } from "@/data/models";
+import LazyImage from "@/components/LazyImage";
 
 const ModelDetail = () => {
   const { slug } = useParams();
@@ -54,10 +55,11 @@ const ModelDetail = () => {
                 className="aspect-[3/4] overflow-hidden bg-secondary group"
                 style={{ position: "relative" }}
               >
-                <img
+                <LazyImage
                   src={model.image}
                   alt={`${model.name} portfolio photo`}
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-cover"
+                  loading="eager"
                   style={{
                     filter: "grayscale(100%) contrast(1.06)",
                   }}
@@ -182,10 +184,10 @@ const ModelDetail = () => {
             >
               {/* Primary image thumbnail */}
               <div className="group overflow-hidden bg-secondary relative" style={{ aspectRatio: "3/4" }}>
-                <img
+                <LazyImage
                   src={model.image}
                   alt={`${model.name} — 1`}
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-cover"
                   style={{ filter: "grayscale(100%) contrast(1.06)" }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLImageElement).style.filter = "grayscale(0%) contrast(1)";
@@ -204,10 +206,10 @@ const ModelDetail = () => {
               {/* Extra photos */}
               {extraPhotos.map((photo, i) => (
                 <div key={i} className="group overflow-hidden bg-secondary relative" style={{ aspectRatio: "3/4" }}>
-                  <img
+                  <LazyImage
                     src={photo}
                     alt={`${model.name} — ${i + 2}`}
-                    className="w-full h-full object-cover transition-all duration-700"
+                    className="w-full h-full object-cover"
                     style={{ filter: "grayscale(100%) contrast(1.06)" }}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLImageElement).style.filter = "grayscale(0%) contrast(1)";
@@ -217,7 +219,6 @@ const ModelDetail = () => {
                       (e.currentTarget as HTMLImageElement).style.filter = "grayscale(100%) contrast(1.06)";
                       (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
                     }}
-                    loading="lazy"
                   />
                   <div className="absolute inset-0 pointer-events-none"
                     style={{ boxShadow: "inset 0 0 60px rgba(0,0,0,0.14)" }} />

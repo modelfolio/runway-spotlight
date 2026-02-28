@@ -3,6 +3,9 @@ import janel2 from "@/assets/janel_periera/janel_2.jpeg";
 import riya1 from "@/assets/riya_balliyan/riya1.jpeg";
 import riya2 from "@/assets/riya_balliyan/riya2.jpeg";
 import riya3 from "@/assets/riya_balliyan/riya3.jpeg";
+import nihanya1 from "@/assets/nihanya/one.jpeg";
+import nihanya2 from "@/assets/nihanya/two.jpeg";
+import nihanya3 from "@/assets/nihanya/three.jpeg";
 
 export interface ModelProfile {
   id: string;
@@ -38,7 +41,7 @@ export const models: ModelProfile[] = [
     shoeSize: "5",
     eyeColor: "Black",
     hairColor: "Dark Brown",
-    location: "Mumbai",
+    location: "Delhi",
     bio: "Janel brings an effortless, magnetic energy to every shoot. Her expressive eyes and natural versatility make her equally at home in commercial campaigns and editorial features, earning her a growing presence across India's fashion and lifestyle landscape.",
     portfolio: [janel1, janel2],
     experience: ["Fresher"],
@@ -57,9 +60,28 @@ export const models: ModelProfile[] = [
     shoeSize: "6",
     eyeColor: "Brown",
     hairColor: "Black",
-    location: "Mumbai",
+    location: "Delhi",
     bio: "Riya brings a bold, contemporary edge to every frame. Her striking features and natural poise make her a standout presence in editorial and commercial work across India's fashion scene.",
     portfolio: [riya1, riya2, riya3],
+    experience: ["Fresher"],
+    available: true,
+  },
+  {
+    id: "3",
+    name: "Nihanya",
+    slug: "nihanya",
+    image: nihanya1,
+    category: "Editorial",
+    height: "5'5\"",
+    bust: "33\"",
+    waist: "27\"",
+    hips: "34\"",
+    shoeSize: "6",
+    eyeColor: "Brown",
+    hairColor: "Black",
+    location: "Kolkata",
+    bio: "Nihanya commands attention with her striking presence and effortless poise. Her versatility across editorial and commercial work, paired with an innate ability to connect with the camera, makes her a compelling force in India's modeling landscape.",
+    portfolio: [nihanya1, nihanya2, nihanya3],
     experience: ["Fresher"],
     available: true,
   },

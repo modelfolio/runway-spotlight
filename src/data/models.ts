@@ -12,6 +12,9 @@ import bhumi3 from "@/assets/Bhumi/three.jpeg";
 import roshni1 from "@/assets/roshni/one.jpeg";
 import roshni2 from "@/assets/roshni/two.jpeg";
 import roshni3 from "@/assets/roshni/three.jpeg";
+import sania1 from "@/assets/sania/one.jpeg";
+import sania2 from "@/assets/sania/two.jpeg";
+import sania3 from "@/assets/sania/three.jpeg";
 
 export interface ModelProfile {
   id: string;
@@ -127,6 +130,25 @@ export const models: ModelProfile[] = [
     bio: "Roshni brings a radiant and composed energy to every frame. Her natural elegance and expressive depth make her a compelling presence across commercial and editorial work.",
     portfolio: [roshni1, roshni2, roshni3],
     experience: ["Fresher"],
+    available: true,
+  },
+  {
+    id: "6",
+    name: "Sania",
+    slug: "sania",
+    image: sania1,
+    category: "Commercial",
+    height: "5'9\"",
+    bust: "34\"",
+    waist: "30\"",
+    hips: "36\"",
+    shoeSize: "9",
+    eyeColor: "Black",
+    hairColor: "Brown",
+    location: "Kolkata",
+    bio: "Sania brings a striking elegance and natural confidence to every frame. Her commanding height and expressive presence make her a compelling talent across commercial and editorial work.",
+    portfolio: [sania1, sania2, sania3],
+    experience: ["No Experience"],
     available: true,
   },
 ];

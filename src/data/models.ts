@@ -15,6 +15,9 @@ import roshni3 from "@/assets/roshni/three.jpeg";
 import sania1 from "@/assets/sania/one.jpeg";
 import sania2 from "@/assets/sania/two.jpeg";
 import sania3 from "@/assets/sania/three.jpeg";
+import tiano1 from "@/assets/tiano/one.jpeg";
+import tiano2 from "@/assets/tiano/two.jpeg";
+import tiano3 from "@/assets/tiano/three.jpeg";
 
 export interface ModelProfile {
   id: string;
@@ -149,6 +152,25 @@ export const models: ModelProfile[] = [
     bio: "Sania brings a striking elegance and natural confidence to every frame. Her commanding height and expressive presence make her a compelling talent across commercial and editorial work.",
     portfolio: [sania1, sania2, sania3],
     experience: ["No Experience"],
+    available: true,
+  },
+  {
+    id: "7",
+    name: "Tiano",
+    slug: "tiano",
+    image: tiano1,
+    category: "Commercial",
+    height: "5'6\"",
+    bust: "30\"",
+    waist: "25\"",
+    hips: "34\"",
+    shoeSize: "3.5 UK",
+    eyeColor: "Brown",
+    hairColor: "Black",
+    location: "Delhi",
+    bio: "Tiano brings a fresh, understated elegance to every frame. Her lean silhouette and expressive gaze make her a compelling presence across commercial and lifestyle work.",
+    portfolio: [tiano1, tiano2, tiano3],
+    experience: ["Fresher"],
     available: true,
   },
 ];

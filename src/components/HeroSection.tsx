@@ -42,6 +42,7 @@ const HeroSection = () => {
         <iframe
           src={`https://www.youtube.com/embed/${YT_ID}?autoplay=1&mute=1&loop=1&playlist=${YT_ID}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&start=0`}
           title="Alliance"
+          loading="eager"
           allow="autoplay; encrypted-media"
           style={{
             position: "absolute",

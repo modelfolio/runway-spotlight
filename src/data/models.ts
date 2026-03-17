@@ -18,6 +18,9 @@ import sania3 from "@/assets/sania/three.jpeg";
 import tiano1 from "@/assets/tiano/one.jpeg";
 import tiano2 from "@/assets/tiano/two.jpeg";
 import tiano3 from "@/assets/tiano/three.jpeg";
+import anusmita1 from "@/assets/anusmita/IMG_4544.JPG.jpeg";
+import anusmita2 from "@/assets/anusmita/IMG_4302.JPG.jpeg";
+import anusmita3 from "@/assets/anusmita/IMG_4360.JPG.jpeg";
 
 export interface ModelProfile {
   id: string;
@@ -170,6 +173,25 @@ export const models: ModelProfile[] = [
     location: "Delhi",
     bio: "Tiano brings a fresh, understated elegance to every frame. Her lean silhouette and expressive gaze make her a compelling presence across commercial and lifestyle work.",
     portfolio: [tiano1, tiano2, tiano3],
+    experience: ["Fresher"],
+    available: true,
+  },
+  {
+    id: "8",
+    name: "Anusmita",
+    slug: "anusmita",
+    image: anusmita1,
+    category: "Commercial",
+    height: "5'6\"",
+    bust: "34\"",
+    waist: "28\"",
+    hips: "34\"",
+    shoeSize: "3 UK",
+    eyeColor: "Brown",
+    hairColor: "Black",
+    location: "Kolkata",
+    bio: "Anusmita carries a natural warmth and poise that translates effortlessly on camera. Her expressive features and graceful presence make her a promising new face for commercial work.",
+    portfolio: [anusmita1, anusmita2, anusmita3],
     experience: ["Fresher"],
     available: true,
   },

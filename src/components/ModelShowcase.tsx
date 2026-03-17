@@ -14,6 +14,7 @@ const ENTRANCE_TRANSFORMS = [
   "rotateX(-18deg) translateY(50px) translateZ(-30px)",
   "rotateY(-20deg) translateX(40px) translateZ(-30px)",
   "rotateX(16deg) translateY(-40px) translateZ(-35px)",
+  "rotateY(-22deg) translateX(45px) translateZ(-45px)",
 ];
 
 const ModelCard = ({
@@ -266,17 +267,17 @@ const ModelShowcase = () => {
         <div className="absolute top-1/4 right-1/4 w-px h-16 bg-gradient-to-b from-transparent via-primary/12 to-transparent animate-float-alt" />
       </div>
 
-      {/* Row 1 — 3 large panels */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
-        {models.slice(0, 3).map((model, i) => (
+      {/* Row 1 — 4 large panels */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-border">
+        {models.slice(0, 4).map((model, i) => (
           <ModelCard key={model.id} model={model} index={i} isLarge isVisible={isVisible} />
         ))}
       </div>
 
       {/* Row 2 — 4 smaller panels */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border">
-        {models.slice(3, 7).map((model, i) => (
-          <ModelCard key={model.id} model={model} index={i + 3} isLarge={false} isVisible={isVisible} />
+        {models.slice(4, 8).map((model, i) => (
+          <ModelCard key={model.id} model={model} index={i + 4} isLarge={false} isVisible={isVisible} />
         ))}
       </div>
 

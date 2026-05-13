@@ -18,6 +18,7 @@ const Navbar = () => {
     { to: "/models", label: "Roster" },
   ];
 
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -53,6 +54,12 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <Link
+            to="/register"
+            className="font-body font-normal uppercase text-xs tracking-[0.38em] border border-foreground px-4 py-1.5 transition-all duration-200 hover:bg-foreground hover:text-background"
+          >
+            Join
+          </Link>
         </div>
 
         {/* ── Mobile hamburger ── */}
@@ -78,6 +85,13 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <Link
+            to="/register"
+            onClick={() => setMobileOpen(false)}
+            className="block py-3 font-body font-normal text-xs tracking-[0.38em] uppercase text-foreground hover:opacity-70 transition-opacity duration-150"
+          >
+            Join
+          </Link>
         </div>
       )}
     </nav>

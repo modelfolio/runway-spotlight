@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { models } from "@/data/models";
 import LazyImage from "@/components/LazyImage";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const ModelDetail = () => {
   const { slug } = useParams();
@@ -43,6 +44,15 @@ const ModelDetail = () => {
     document.body.style.overflow = lightboxIndex !== null ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [lightboxIndex]);
+
+  usePageMeta({
+    title: model
+      ? `${model.name} — ${model.category} Model ${model.location} | Alliance Models`
+      : "Model Not Found | Alliance Models",
+    description: model
+      ? `${model.name} is a ${model.category.toLowerCase()} model based in ${model.location}. ${model.bio.slice(0, 120)}…`
+      : "This model profile could not be found.",
+  });
 
   if (!model) {
     return (

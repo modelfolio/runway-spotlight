@@ -1,15 +1,17 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import CursorFollower from "./components/CursorFollower";
+import { pageview } from "./lib/analytics";
 
 // Route-level code splitting — only the home page is eagerly loaded
 const Models = lazy(() => import("./pages/Models"));
 const ModelDetail = lazy(() => import("./pages/ModelDetail"));
+const Register = lazy(() => import("./pages/Register"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -27,6 +29,14 @@ const PageShell = () => (
   <div className="min-h-screen bg-background" aria-hidden />
 );
 
+const RouteTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    pageview(location.pathname + location.search);
+  }, [location]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -35,11 +45,13 @@ const App = () => (
       {/* Global custom cursor — hides default cursor on pointer devices */}
       <CursorFollower />
       <BrowserRouter>
+        <RouteTracker />
         <Suspense fallback={<PageShell />}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/models" element={<Models />} />
             <Route path="/models/:slug" element={<ModelDetail />} />
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -3,8 +3,13 @@ import Navbar from "@/components/Navbar";
 import ModelCard from "@/components/ModelCard";
 import Footer from "@/components/Footer";
 import { models, categories } from "@/data/models";
+import usePageMeta from "@/hooks/usePageMeta";
 
 const Models = () => {
+  usePageMeta({
+    title: "Our Models — Alliance Models | Editorial, Commercial & Runway Talent India",
+    description: "Browse the full Alliance Models roster — editorial, commercial, and runway models from Delhi, Mumbai, Kolkata and internationally. Freshers and experienced talent.",
+  });
   const [activeCategory, setActiveCategory] = useState("All");
   const [isVisible, setIsVisible] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);

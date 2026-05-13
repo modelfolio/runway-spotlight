@@ -21,6 +21,15 @@ import tiano3 from "@/assets/tiano/three.jpeg";
 import anusmita1 from "@/assets/anusmita/IMG_4544.JPG.jpeg";
 import anusmita2 from "@/assets/anusmita/IMG_4302.JPG.jpeg";
 import anusmita3 from "@/assets/anusmita/IMG_4360.JPG.jpeg";
+import asmita1 from "@/assets/asmita_adhikari/one.jpeg";
+import asmita2 from "@/assets/asmita_adhikari/two.jpeg";
+import asmita3 from "@/assets/asmita_adhikari/three.jpeg";
+import anastasia1 from "@/assets/anastasia/one.jpeg";
+import anastasia2 from "@/assets/anastasia/two.jpeg";
+import anastasia3 from "@/assets/anastasia/three.jpeg";
+import katya1 from "@/assets/katya/one.jpeg";
+import katya2 from "@/assets/katya/two.jpeg";
+import katya3 from "@/assets/katya/three.jpeg";
 
 export interface ModelProfile {
   id: string;
@@ -43,6 +52,63 @@ export interface ModelProfile {
 }
 
 export const models: ModelProfile[] = [
+  {
+    id: "9",
+    name: "Asmita Adhikari",
+    slug: "asmita-adhikari",
+    image: asmita1,
+    category: "Editorial",
+    height: "5'4\"",
+    bust: "33\"",
+    waist: "27\"",
+    hips: "35\"",
+    shoeSize: "6",
+    eyeColor: "Brown",
+    hairColor: "Black",
+    location: "Delhi",
+    bio: "Asmita Adhikari is a Delhi-based model and digital influencer known for her calm confidence and expressive screen presence. Her appearance on MTV Splitsvilla 16 brought her wide recognition, and she continues to make her mark across editorial and lifestyle campaigns with an effortlessly contemporary style.",
+    portfolio: [asmita1, asmita2, asmita3],
+    experience: ["MTV Splitsvilla 16"],
+    available: true,
+  },
+  {
+    id: "10",
+    name: "Anastasia Morozova",
+    slug: "anastasia-morozova",
+    image: anastasia1,
+    category: "Editorial",
+    height: "5'9\"",
+    bust: "34\"",
+    waist: "24\"",
+    hips: "35\"",
+    shoeSize: "7",
+    eyeColor: "Blue",
+    hairColor: "Blonde",
+    location: "Moscow, Russia",
+    bio: "Anastasia brings an effortless European sophistication to every project. Her striking blue eyes, statuesque frame, and intuitive on-camera presence make her a sought-after talent for high-fashion editorial and premium commercial campaigns across India and internationally.",
+    portfolio: [anastasia1, anastasia2, anastasia3],
+    experience: ["International"],
+    available: true,
+  },
+  {
+    id: "11",
+    name: "Katya Volkova",
+    slug: "katya-volkova",
+    image: katya1,
+    category: "Commercial",
+    height: "5'8\"",
+    bust: "33\"",
+    waist: "25\"",
+    hips: "34\"",
+    shoeSize: "7",
+    eyeColor: "Green",
+    hairColor: "Brown",
+    location: "Saint Petersburg, Russia",
+    bio: "Katya's natural versatility and warm, captivating energy set her apart. Whether commanding a runway or anchoring a lifestyle campaign, she delivers a refined yet approachable presence that resonates across audiences — bringing a distinctly international edge to every collaboration.",
+    portfolio: [katya1, katya2, katya3],
+    experience: ["International"],
+    available: true,
+  },
   {
     id: "1",
     name: "Janel Periera",
